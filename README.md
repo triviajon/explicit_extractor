@@ -1,6 +1,12 @@
 # A Simple Explicit Extractor
 ## based off the construction of Carter and Wegman
 
+### Explore
+
+In `test_extractor.py` is an example of using the CW-randomness extractor to simulate the randomized algorithm for solving the Polynomial Identity Testing (PIT) problem. The PIT problem checks if two polynomials are equivalent over a field. It is a widely known example of a problem that is in the BPP complexity class, but not in P. In other words, the randomized algorithm here solves the problem with good probability and in polynomial runtime, but currently there are no known derandomized algorithms to solve this problem in polynomial time.  
+
+In the language of randomness extractors: we provide a truly random seed (in this case, a string of bits that correspond to a hash function) and use it partially derandomize the randomized algorithm for solving PIT. With better extractors, we could use a shorter seed and still achieve close to random results. 
+
 Constructing 2-independent hash functions, as given by Carter and Wegman.
 
 ### Technique
